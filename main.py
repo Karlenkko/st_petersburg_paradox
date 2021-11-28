@@ -9,10 +9,10 @@ def gain(n):
     for i in range (1, n + 1):
         j = 0
         win = False
-        while j < i and not win and pow(2, j) <= 10000000:
+        while not win and pow(2, j) <= 10000000:
             j = j + 1
             win = random.randint(0, 1) == 1
-        total += pow(2, j) * win
+        total += pow(2, j)
         res.append(total / i)
     return res
 
